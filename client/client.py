@@ -9,4 +9,4 @@ socket = ctx.socket(zmq.PULL)
 socket.connect(sys.argv[1])
 while True:
     x = socket.recv_string()
-    print(x.rstrip('\n'))
+    print(x.rstrip('\n'), flush=True)
