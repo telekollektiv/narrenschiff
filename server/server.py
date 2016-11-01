@@ -8,9 +8,9 @@ ctx = zmq.Context()
 socket = ctx.socket(zmq.PUSH)
 socket.bind('tcp://0.0.0.0:5500')
 
-@app.route('/')
+@app.route('/ichwilldenstreamsehen')
 def index():
-    return render_template('index.html.j2')
+    return render_template('stream.html')
 
 
 @app.route('/send', methods=['POST'])
