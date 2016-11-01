@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'american_typewriter';
+  font-style: normal;
+  src: url('ufonts.com_american-typewriter.ttf') format('truetype');
+}
+
+
+body {
+    font-family: "american_typewriter";
+    background-color: black;
+    color: white;
+}
+
+div {
+    margin-left: 20vw;
+    margin-bottom: calc(12px + 3vw);
+    margin-right: 10vw;
+}
+
+#eins {
+    font-size: calc(12px + 3vw);
+}
+
+#zwei {
+    font-size: calc(10px + 1vw);
+}
+
+#drei{
+    font-size: 10px;
+}
+
+img{
+    width: 10vw;
+}
+
+a {
+    font-size: calc(10px + 1vw);
+}
+
+a:link {
+    color: white
+}
+
+a:visited {
+    color: white
+}
+
+a:hover {
+    color: #bbbbbb
+}
+
+a:active {
+    color: #888888
+}
