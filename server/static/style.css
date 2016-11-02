@@ -56,3 +56,11 @@ a:hover {
 a:active {
     color: #888888
 }
+
+#input-txt {
+    width: 500px;
+}
+
+.slight-left-tendencies {
+    margin-left: 20px;
+}

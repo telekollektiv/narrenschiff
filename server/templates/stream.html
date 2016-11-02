@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
-        <h1>Das Narrenschiff Livestream</h1>
+        <h1 class="slight-left-tendencies">Schön, dass du da bist,
+            <a href="https://de.wikipedia.org/wiki/Kiebitz_%28Spielbeobachter%29%29" target="_blank">Kiebitz</a></h1>
 
         <div class='twitchWrapper'>
             <div class='twitchStream'>
@@ -18,9 +19,11 @@
             </div>
         </div>
 
-        <form action="/send" method="POST">
-            <input name="txt">
-            <input type="submit">
+        <p class="slight-left-tendencies">Lege fest, welche Funktion es in diesem Raum geben muss</p>
+
+        <form action="/send" method="POST" class="slight-left-tendencies">
+            <input name="txt" id="input-txt" placeholder="Gib eine Funktion ein und drücke Enter. Bsp: FunktionsgebErIn">
+            <input type="submit" value="Tut es">
         </form>
     </body>
 </html>
