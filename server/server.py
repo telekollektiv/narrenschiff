@@ -8,8 +8,26 @@ ctx = zmq.Context()
 socket = ctx.socket(zmq.PUSH)
 socket.bind('tcp://0.0.0.0:5500')
 
+import os
+import time
+TIMESTAMP_WORKAROUND = 'last_instruction.workaround'
+INSTRUCTION_DELAY = 2 * 60  # 2min
+
+def get_last_instruction():
+    return int(os.stat(TIMESTAMP_WORKAROUND).st_mtime)
+
+def set_last_instruction():
+    os.utime(TIMESTAMP_WORKAROUND, None)
+
+
+def now():
+    return int(time.time())
+
+
 @app.route('/')
 def index():
+    print(set_last_instruction())
+    print(get_last_instruction())
     return render_template('index.html')
 
 
@@ -25,6 +43,12 @@ def stream():
 
 @app.route('/send', methods=['POST'])
 def send():
+    if get_last_instruction() + INSTRUCTION_DELAY > now():
+        return jsonify({
+            'status': 'nope'
+        })
+
+    set_last_instruction()
     txt = str(request.form['txt'])
     socket.send_string(txt)
     return jsonify({
