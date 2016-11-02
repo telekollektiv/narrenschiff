@@ -13,6 +13,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/impressum')
+def impressum():
+    return render_template('impressum.html')
+
+
 @app.route('/ichwilldenstreamsehen')
 def stream():
     return render_template('stream.html')
