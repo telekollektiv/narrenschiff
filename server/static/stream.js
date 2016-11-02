@@ -19,6 +19,7 @@ window.onload = (function() {
         .then(rep => {
             if(rep.status == 'success') {
                 apiResponse.textContent = 'gesendet.';
+                txt.value = '';
             } else {
                 apiResponse.textContent = 'zu viele Aufgaben, warte ein wenig :)';
             }
