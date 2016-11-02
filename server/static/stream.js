@@ -22,6 +22,10 @@ window.onload = (function() {
             } else {
                 apiResponse.textContent = 'zu viele Aufgaben, warte ein wenig :)';
             }
+
+            setTimeout(function() {
+                apiResponse.textContent = '';
+            }, 3000);
         });
     };
 })();
