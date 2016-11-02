@@ -10,7 +10,7 @@ socket.bind('tcp://0.0.0.0:5500')
 
 import os
 import time
-TIMESTAMP_WORKAROUND = 'last_instruction.workaround'
+TIMESTAMP_WORKAROUND = 'persistent/last_instruction.workaround'
 INSTRUCTION_DELAY = 2 * 60  # 2min
 
 def get_last_instruction():
@@ -26,8 +26,6 @@ def now():
 
 @app.route('/')
 def index():
-    print(set_last_instruction())
-    print(get_last_instruction())
     return render_template('index.html')
 
 
@@ -57,4 +55,4 @@ def send():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
