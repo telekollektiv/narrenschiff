@@ -1,5 +1,7 @@
 # narrenschiff
 
+Disclaimer: written with a 2day deadline on sparetime, pls don't judge.
+
 ```
 [Online]            [Server]
 [http       --->    http]           [Schauspieler]
