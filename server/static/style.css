@@ -4,17 +4,11 @@
   src: url('ufonts.com_american-typewriter.ttf') format('truetype');
 }
 
-
 body {
     font-family: "american_typewriter";
     background-color: black;
     color: white;
-}
-
-div {
-    margin-left: 20vw;
-    margin-bottom: calc(12px + 3vw);
-    margin-right: 10vw;
+    margin: 0;
 }
 
 #eins {

@@ -8,8 +8,13 @@ ctx = zmq.Context()
 socket = ctx.socket(zmq.PUSH)
 socket.bind('tcp://0.0.0.0:5500')
 
-@app.route('/ichwilldenstreamsehen')
+@app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/ichwilldenstreamsehen')
+def stream():
     return render_template('stream.html')
 
 
