@@ -5,6 +5,7 @@
         <title>Das Narrenschiff</title>
         <link rel="stylesheet" href="/static/embedTwitchCSS.css">
         <link rel="stylesheet" href="/static/style.css">
+        <script async src="/static/stream.js"></script>
     </head>
     <body>
         <h1 class="slight-left-tendencies">Schön, dass du da bist,
@@ -21,9 +22,10 @@
 
         <p class="slight-left-tendencies">Lege fest, welche Funktion es in diesem Raum geben muss</p>
 
-        <form action="/send" method="POST" class="slight-left-tendencies">
+        <form action="/send" method="POST" class="slight-left-tendencies" id="instruction-form">
             <input name="txt" id="input-txt" placeholder="Gib eine Funktion ein und drücke Enter. Bsp: FunktionsgebErIn">
             <input type="submit" value="Tut es">
+            <span id="api-response"></span>
         </form>
     </body>
 </html>
