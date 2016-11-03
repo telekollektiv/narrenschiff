@@ -13,7 +13,7 @@
 	padding-top: 56.25%; /* 16:9 */
 }
 
-.twitchChat{
+.chatbox{
 	position: absolute;
     top: 0;
     bottom: 0;
@@ -21,7 +21,7 @@
 	width: 25%;
 }
 
-.twitchStream iframe, .twitchChat iframe {
+.twitchStream iframe, .chatbox iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -33,7 +33,7 @@
 	.twitchStream{
 		width:100%;
 	}
-	.twitchChat{
+	.chatbox{
 		display:none;
 	}
 }
