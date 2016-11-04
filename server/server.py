@@ -11,7 +11,7 @@ socket.bind('tcp://0.0.0.0:5500')
 import os
 import time
 TIMESTAMP_WORKAROUND = 'persistent/last_instruction.workaround'
-INSTRUCTION_DELAY = 2 * 60  # 2min
+INSTRUCTION_DELAY = 2 * 15  # 30sek
 
 def get_last_instruction():
     return int(os.stat(TIMESTAMP_WORKAROUND).st_mtime)
